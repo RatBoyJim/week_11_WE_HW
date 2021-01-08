@@ -27,30 +27,16 @@ public class Deck {
         return true;
     }
 
-//    public ArrayList<Card> shuffleCards(){
-//        this.deck = makeDeck();
-//        System.out.println(this.deck);
-//        Collections.shuffle(this.deck);
-//        System.out.println(this.deck);
-//        return this.deck;
-//    }
 
     public ArrayList<Card> shuffleCards(){
         Collections.shuffle(this.deck);
         return this.deck;
     }
 
-
-    public RankType pickCard() {
-        Card card = this.deck.get(0);
-        RankType cardRank = card.getRank();
-        return cardRank;
-    }
-
-    public Card dealCard() {
-        Card card = this.deck.remove(0);
-        System.out.println(card.getRank());
-        System.out.println(card.getSuit());
-        return card;
-    }
+//    public Card dealCard() {
+//        Card card = this.deck.remove(0);
+//        System.out.println(card.getRank());
+//        System.out.println(card.getSuit());
+//        return card;
+//    }
 }

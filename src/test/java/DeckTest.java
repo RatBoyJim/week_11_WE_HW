@@ -6,7 +6,6 @@ import static org.junit.Assert.assertEquals;
 public class DeckTest {
 
     Deck deck;
-    Deck fullDeck;
 
     @Before
     public void setUp(){
@@ -32,32 +31,18 @@ public class DeckTest {
     }
 
     @Test
-    public void shuffledDeckContainsADeck(){
+    public void shuffledDeckContainsAFullDeck(){
         deck.makeDeck();
         deck.shuffleCards();
         assertEquals(52, deck.getNumberOfCards());
     }
 
     @Test
-    public void canPickACard(){
-        deck.makeDeck();
-        assertEquals(RankType.ACE, deck.pickCard());
-    }
-
-    @Test
-    public void canDealCard(){
+    public void shuffledDeckContainsSpecificCard(){
         deck.makeDeck();
         deck.shuffleCards();
-        deck.dealCard();
-        assertEquals(51, deck.getNumberOfCards());
+        Card card = new Card(SuitType.HEARTS, RankType.ACE);
+        assertEquals(true, deck.findCard(card));
     }
 
-    @Test
-    public void canDeal2Cards(){
-        deck.makeDeck();
-        deck.shuffleCards();
-        deck.dealCard();
-        deck.dealCard();
-        assertEquals(50, deck.getNumberOfCards());
-    }
 }
