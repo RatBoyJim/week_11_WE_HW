@@ -22,6 +22,10 @@ public class Deck {
         return this.deck.size();
     }
 
+    public ArrayList<Card> getDeck(){
+        return this.deck;
+    }
+
     public Boolean findCard(Card card) {
         if (this.deck.contains(card));
         return true;

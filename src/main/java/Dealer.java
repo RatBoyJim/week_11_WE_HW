@@ -10,9 +10,18 @@ public class Dealer {
         this.shuffledDeck = new ArrayList<Card>();
     }
 
+    public int getNumberOfShuffledCards() {
+        return this.shuffledDeck.size();
+    }
 
-    public Card dealCard(ArrayList<Card> deck) {
-        Card card = deck.remove(0);
+    public ArrayList<Card> shuffleCards(ArrayList<Card> deck){
+        this.shuffledDeck = deck;
+        Collections.shuffle(this.shuffledDeck);
+        return this.shuffledDeck;
+    }
+
+    public Card dealCard() {
+        Card card = shuffledDeck.remove(0);
         System.out.println(card.getRank());
         System.out.println(card.getSuit());
         return card;
