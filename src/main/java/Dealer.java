@@ -25,11 +25,22 @@ public class Dealer {
         return this.shuffledDeck;
     }
 
+    public Card dealQueenOfHearts(Player player){
+        Card card = new Card(SuitType.HEARTS, RankType.QUEEN);
+        ArrayList<Card> playerDeck = player.getPlayerCards();
+        playerDeck.add(card);
+        return card;
+    }
+
+    public Card dealFourOfClubs(Player player){
+        Card card = new Card(SuitType.CLUBS, RankType.FOUR);
+        ArrayList<Card> playerDeck = player.getPlayerCards();
+        playerDeck.add(card);
+        return card;
+    }
+
     public Card dealCard(Player player) {
         Card card = shuffledDeck.remove(0);
-        System.out.println(card.getRank());
-        System.out.println(card.getSuit());
-        System.out.println("");
         ArrayList<Card> playerDeck = player.getPlayerCards();
         playerDeck.add(card);
         return card;
