@@ -25,25 +25,40 @@ public class Dealer {
         return this.shuffledDeck;
     }
 
-    public Card dealQueenOfHearts(Player player){
+    public void dealQueenOfHearts(Player player){
         Card card = new Card(SuitType.HEARTS, RankType.QUEEN);
         ArrayList<Card> playerDeck = player.getPlayerCards();
         playerDeck.add(card);
-        return card;
     }
 
-    public Card dealFourOfClubs(Player player){
+    public void dealFourOfClubs(Player player){
         Card card = new Card(SuitType.CLUBS, RankType.FOUR);
         ArrayList<Card> playerDeck = player.getPlayerCards();
         playerDeck.add(card);
-        return card;
     }
 
-    public Card dealCard(Player player) {
+    public void dealQueenOfDiamonds(Player player){
+        Card card = new Card(SuitType.DIAMONDS, RankType.QUEEN);
+        ArrayList<Card> playerDeck = player.getPlayerCards();
+        playerDeck.add(card);
+    }
+
+    public void dealTwoOfHearts(Player player){
+        Card card = new Card(SuitType.HEARTS, RankType.TWO);
+        ArrayList<Card> playerDeck = player.getPlayerCards();
+        playerDeck.add(card);
+    }
+
+    public void dealNineOfSpades(Player player){
+        Card card = new Card(SuitType.SPADES, RankType.NINE);
+        ArrayList<Card> playerDeck = player.getPlayerCards();
+        playerDeck.add(card);
+    }
+
+    public void dealCard(Player player) {
         Card card = shuffledDeck.remove(0);
         ArrayList<Card> playerDeck = player.getPlayerCards();
         playerDeck.add(card);
-        return card;
     }
 
 }

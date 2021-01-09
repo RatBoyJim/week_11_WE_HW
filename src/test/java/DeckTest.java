@@ -18,7 +18,7 @@ public class DeckTest {
     }
 
     @Test
-    public void deckHas52Cards(){
+    public void deckHas52CardsAfterBeingMade(){
         deck.makeDeck();
         assertEquals(52, deck.getNumberOfCards());
     }
