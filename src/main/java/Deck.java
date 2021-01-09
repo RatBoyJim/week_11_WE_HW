@@ -31,16 +31,4 @@ public class Deck {
         return true;
     }
 
-
-    public ArrayList<Card> shuffleCards(){
-        Collections.shuffle(this.deck);
-        return this.deck;
-    }
-
-//    public Card dealCard() {
-//        Card card = this.deck.remove(0);
-//        System.out.println(card.getRank());
-//        System.out.println(card.getSuit());
-//        return card;
-//    }
 }

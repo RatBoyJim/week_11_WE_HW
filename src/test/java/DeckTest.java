@@ -26,23 +26,9 @@ public class DeckTest {
     @Test
     public void deckContainsSpecificCard(){
         deck.makeDeck();
-        Card card = new Card(SuitType.HEARTS, RankType.ACE);
+        Card card = new Card(SuitType.DIAMONDS, RankType.TEN);
         assertEquals(true, deck.findCard(card));
     }
 
-    @Test
-    public void shuffledDeckContainsAFullDeck(){
-        deck.makeDeck();
-        deck.shuffleCards();
-        assertEquals(52, deck.getNumberOfCards());
-    }
-
-    @Test
-    public void shuffledDeckContainsSpecificCard(){
-        deck.makeDeck();
-        deck.shuffleCards();
-        Card card = new Card(SuitType.HEARTS, RankType.ACE);
-        assertEquals(true, deck.findCard(card));
-    }
 
 }

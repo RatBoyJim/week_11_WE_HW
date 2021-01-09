@@ -14,6 +14,11 @@ public class Dealer {
         return this.shuffledDeck.size();
     }
 
+    public Boolean findCard(Card card) {
+        if (this.shuffledDeck.contains(card));
+        return true;
+    }
+
     public ArrayList<Card> shuffleCards(ArrayList<Card> deck){
         this.shuffledDeck = deck;
         Collections.shuffle(this.shuffledDeck);

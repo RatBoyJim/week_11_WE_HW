@@ -23,6 +23,14 @@ public class DealerTest {
     }
 
     @Test
+    public void shuffledDeckContainsSpecificCard(){
+        deck.makeDeck();
+        dealer.shuffleCards(deck.getDeck());
+        Card card = new Card(SuitType.HEARTS, RankType.SEVEN);
+        assertEquals(true, dealer.findCard(card));
+    }
+
+    @Test
     public void canDealCard(){
         deck.makeDeck();
         dealer.shuffleCards(deck.getDeck());
