@@ -25,10 +25,13 @@ public class Dealer {
         return this.shuffledDeck;
     }
 
-    public Card dealCard() {
+    public Card dealCard(Player player) {
         Card card = shuffledDeck.remove(0);
         System.out.println(card.getRank());
         System.out.println(card.getSuit());
+        System.out.println("");
+        ArrayList<Card> playerDeck = player.getPlayerCards();
+        playerDeck.add(card);
         return card;
     }
 
